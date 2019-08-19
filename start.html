@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>dialogue</title>
+
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td style="width:40%;">
+        <script type="text/javascript" src="demo.js">
+        </script>
+      </td>
+      <td>
+        <button name="button1" onclick="buttonClick()">Click me</button>
+        <button name="button2" onclick="buttonClick2()">Click me for text change</button>
+        <h3 id="textclick">change text over here.</h3>
+        <form>
+          <div id="textbox">
+            <input type="text" name="username" placeholder="Username" id="alias" required> <!-- required attribute is used so that the user cannot leave empty box (HTML 5 property) -->
+            <input type="password" name="password" placeholder="Password" id="pass" required>
+            <button name="button3" onclick="verify()">submit</button>
+          </div>
+          <input type="radio" name="rd1" value="Male" id="rad1">Male
+          <input type="radio" name="rd1" value="Female" id="rad2">Female
+          <button name="button4" onclick="radioCheck()">submit</button><br>
+          <select id="simple">
+            <option value="Faridabad">Faridabad</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+          <button name="button5" onclick="selectbox()">submit</button>
+          <p>paragraph 1</p>
+          <p class="cn">paragraph 2</p>
+          <p>paragraph 3</p>
+          <button name="button6" onclick="changestyle()">style</button>
+          <button name="button7" onclick="changecolor()">color</button><br>
+          <p id="mouseover" onmouseover="changesize()" onmouseout="changeback()">
+            Mouse hover text change.
+          </p>
+        </form>
+        <form onsubmit="return validate()">
+          <input type="text" name="username1" placeholder="username" id="username1">
+          <label id="invuser" style="color:red; visibility: hidden;">Invalid</label>
+          <input type="password" name="password1" placeholder="password" id="password1">
+          <label id="invpass" style="color:red; visibility: hidden;">Invalid</label>
+          <label id="morepass" style="color:red; visibility: hidden;">Enter more than 5 characters</label><br>
+          <button type="submit" name="">Submit</button><br>
+          <input type="text" name="username2" placeholder="username@gmail.com" id="username2">
+          <label id="nocomp" style="color:red; visibility: hidden;">@gmail.com not found</label><br>
+          <button type="button" name="submitvalue" onclick="reg()">check regular</button><br>
+          <input type="text" name="character" placeholder="specific text" id="stext">
+          <label id="invalidchar" style="color:red; visibility: hidden;">invalid ID</label><br>
+          <button type="button" name="button8" onclick="numberval()">check</button><br>
+          <input type="email" name="e-mail" placeholder="Email-ID" id="Emailtest">
+          <label id="invalidmail" style="color:red; visibility: hidden;">invalid Email-ID</label><br>
+          <button type="button" name="button9" onclick="emailval()">Verify</button><br>
+          <button type="button" name="button10" id="starttime" onclick="start()">start</button>
+          <p id="txttimer">Timer</p>
+          <button type="button" name="button11" id="stoptime" onclick="stop()">stop</button>
+          <button type="button" name="button12" onclick="textio()"  id="fadeo">Fade Out</button><span id="textFade"> <b>Ambuj Kumar</b> </span><button type="button" name="button13" onclick="textoi()" id="fadei">Fade In</button>
+        </form>
+        <br>
+        <p id="expink" onmouseover="increase()" onmouseout="decrease()">
+          Ambuj Kumar
+        </p>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

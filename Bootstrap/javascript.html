@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+</head>
+<body>
+</body>
+<script>
+  document.write('hello world! <br>');
+  var sum = 10 + 32;
+  sum--;
+  document.write(sum);
+  document.write('<br> I am LEGEND wait for it DARY... "LEGENDARY...!!"<br>')
+  var name  = 'Ambuj';
+  document.write('My name is ' + name + ' and I am awesome. <br>');
+  function f1(){
+    thumbnail = 10; // no var makes a variable global.
+  }
+  function f2(){
+    document.write(thumbnail);
+  }
+  f1()
+  f2()
+  // appending to a list and popping the first value.
+  function f3(array, num){
+    array.push(num);
+    return array.shift();
+  }
+  var array = [1,2,3,4,5];
+  f = f3(array, 9);
+  document.write("<br>The popped number:" + f + " from the array: " + array);
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+  font-size: 20px;
+}
+
+table.test {
+  empty-cells: hide;
+  border-spacing: 5px 5px;
+  text-shadow: 0px 0px 1px;
+}
+
+td {
+  padding: 15px;
+  border: 2px solid cyan;
+}
+
+input[type="text"] {
+  height: 25px;
+}
+
+label#class {
+  text-align: left;
+  margin-left: 2%;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+table.test:hover {
+  border-spacing: 15px;
+  transition-duration: 0.5s;
+}
+
+td:hover {
+  color: red;
+  background-color: cyan;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+div.tab {
+  margin: auto 500px 10px 100px;
+  float: right;
+}
+
+input[type="submit"] {
+  width: 300px;
+  height: 35px;
+  margin-left: 2%;
+  border-radius: 20px;
+  border: solid cyan;
+  background-color: cyan;
+  text-shadow: 0px 0px 1px;
+  font-size: 0.5em;
+  margin: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  transition-duration: 0.3s;
+  color: red;
+  cursor: pointer;
+}
+div.first{
+  float: left;
+}
+h1 {
+  float: left;
+  margin: 10px 20px 20px 10px;
+  text-decoration: underline;
+}
+
+p {
+  width: 500px;
+  float: none;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+</head>
+<style>
+form#f1 {  border: 1px solid red;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+}
+div#anim{
+  height: 100px;
+  width: 100px;
+  background-color: cyan;
+  border: 2px solid black;
+  margin: 10px;
+  padding-left: 20px;
+}
+div#paragraph{
+  border: 1px solid red;
+  width: 300px;
+  padding: 5px;
+  margin: 10px;
+}
+
+</style>
+
+<body>
+  <form id="f1" action="index.html" style="">
+    <button type="button" onclick="fun1()">click me 1</button>
+    <button type="button" id="button2">click me 2</button>
+    <button type="button" id="button3">click me 3</button>
+    <button type="button" id="button4">click me 4</button>
+    <span id="heading1">Ambuj Kumar.</span>
+    <span id="heading2">Ambuj Kumar.</span>
+    <span id="heading3">Ambuj Kumar.</span>
+    <span id="heading4">Ambuj Kumar.</span>
+  </form>
+  <form id="f2">
+    <button id="effects">Animation</button>
+    <button id="slide">slide</button>
+    <div id="anim">Animation</div>
+    <button class="details">Click Me</button>
+    <br>
+    <button class="b1">Append</button>
+    <button class="b2">After</button>
+    <button class="b3">Prepend</button>
+    <button class="b4">Before</button><br>
+    <button class="b5">Remove</button>
+    <button class="b6">Empty</button>
+    <div id="paragraph">
+      <p id="para1">This is paragraph one.</p>
+    </div>
+  </form>
+</body>
+
+<script src="jquery.js"></script>
+<script>
+  // fade and fadeout animation.(Selectors in jquery 'element','tag','ID','class')
+  function fun1() {
+    //  $("#heading1").fadeToggle(1000); // time in milliseconds.
+    //  $("#heading1,#heading3").fadeToggle(1000); //fading heading 1 and 3.
+    //  $("span").fadeToggle(1000); // fading using tag.
+    //  $("span:odd").fadeToggle(1000); // fading using even or odd.
+    $("form > #heading2").fadeToggle("1000"); // fading child of parent.
+  }
+  // events in jquery are called out differently (Events)
+  $(document).ready(function() { // this line of code is used so that your jquery is functional only after the page is fully loaded.
+    $("#button2").click(fun2); // this is equals to onclick(single click) event in javascript.
+    //  $("#button3").dblclick(fun1); // this event is used on double click.
+    //  $("#button3").mouseenter(fun2); // this event is used on mouse over.
+    //  $("#button4").mouseleave(fun1); // this event is used on mouse exit.
+    $("#button3").hover(fun2); // this element is used on hover.
+    function fun2() {
+      $("#heading1").fadeToggle("slow");
+    }
+    /*
+    (effects)
+    slideUp - in this effect the select operator is slided upside and you can specify its speed inside "()".
+    slideDown - in this effect the select operator is slided downside and you can specify its speed inside "()".
+    slideToggle - in this effect the select operator is slided upside as well as downside and you can specify its speed inside "()".
+    show - in this effect the select operator is shown.
+    hide - in this effect the selected operator is hidden.
+    fadeIn - in this effect the selected operator is faded in and you can also change the speed.
+    fadeOut - in this effect the selected operator is faded out and you can also change the speed.
+    fadeToggle - in this effect the selected operator is faded out as well as faded in and you can also change the speed.
+    */
+    // (Animation) changing the opacity of the box.
+    $("#effects").click(function() {
+      $("#anim").animate({ // animate can use three values inside "()" which are {css},time,callback.
+        opacity: "0.1",
+        width: "200px"
+      });
+    });
+    // (callback function) scrolling the box.
+    function fun4() {
+      alert("sliding is done");
+    }
+    $("#slide").click(function() {
+      //  $("#anim").slideUp("slow", fun4); // slides slowly upward then alerts that sliding is done.
+      $("#anim").slideUp("slow").slideDown("slow"); // using chaining.
+    });
+    //(DOM manipulation) accessing different values
+    /*
+    html(),text(),css(),attr() which stands for attirbute.
+    */
+    $(".details").click(function() {
+      //  alert($("#anim").css("border")); // to access the details of the border.
+      $("#anim").css("border", "3px solid darkcyan"); // to change the css values.
+    });
+    /*
+    append() - Inserts the content at end of the selected elements.
+    prepend() - Inserts the content at beginning of the selected elements.
+    after() - Inserts the content after the selected elements.
+    before() - Inserts the content before the selected elements.
+
+    remove() - Removes the selected element and its child elements.
+    empty() - Removes the child element from the selected elements.
+
+    */
+    $(".b1").click(function() {
+      $("#paragraph").append("<p>This is paragraph two.</p>");
+    });
+    $(".b2").click(function() {
+      $("#paragraph").after("<p>This is paragraph three.</p>");
+    });
+    $(".b3").click(function() {
+      $("#paragraph").prepend("<p>This is paragraph four.</p>");
+    });
+    $(".b4").click(function() {
+      $("#paragraph").before("<p>This is paragraph five.</p>");
+    });
+    $(".b5").click(function() {
+      $("div").remove("#paragraph"); // remove
+    });
+    $(".b6").click(function() {
+      $("#paragraph").empty(); // empty
+    });
+    /*
+    addClass() - Adds one  or more classes to the selected elements.
+    removeClass() - Removes one  or more classes to the selected elements.
+    toggleClass() - Toggles between removes/adds classes from the selected elements.
+    css() - Sets or returnd the style attributes.
+    */
+
+  });
+</script>
+
+</html>

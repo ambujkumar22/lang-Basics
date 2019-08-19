@@ -1,0 +1,60 @@
+comment = //
+// creating a table
+CREATE TABLE employee(
+    id INT NOT NULL AUTO_INCREMENT,  // AUTO_INCREMENT is to automatically increment the value of id
+    em_name VARCHAR(20) NOT NULL,
+    department VARCHAR(30) UNIQUE,
+    salary INT(20) DEFAULT 0, // if salary is not inserted then default is saved as INR zero.
+    PRIMARY KEY(id) // to declare a primary key and primary keys are always not null and unique in nature and a table can have only one primary key.
+);
+
+// showing table
+SELECT * FROM employee;
+
+// delete a table
+DROP TABLE employee;
+
+// alter table
+ALTER TABLE employee ADD bonus DECIMAL(3,2); //deicmal takes 2 parameters which in this case are total 3 digits and 2 digits after the dot.
+
+//delete column
+ALTER TABLE employee DROP COLUMN bonus;
+
+// insert values into table
+INSERT INTO employee(id,em_name,department,salary) VALUES(1,'Ambuj','Developer');
+
+// update the table
+UPDATE FROM employee
+SET department = 'fullstack developer'
+WHERE department = 'developer' OR department = 'designer';
+
+// delete FROM rows
+DELETE FROM employee
+WHERE id = 1;
+
+// show only names in a descending order by ID
+SELECT names FROM employee
+ORDER BY  id DESC;
+
+// limiting the resulting rows
+SELECT * FROM employee
+LIMIT 2;
+
+// ordering in a chain in ascending order first it will sort the names in ascending order and in case of same names it will ascend by the ID.
+SELECT * FROM employee
+ORDER BY name, id ASC;
+
+// for commenting the doubledashes are used in SQL
+-- this text is not going to grt printed --
+
+// different types of operators
+<> - not
+AND - and operator
+OR - or operator
+< - smaller than operator
+> - greater than operator
+<= - smaller than or equals to
+>= - greater than or equals to
+= - equals to operator
+
+//
