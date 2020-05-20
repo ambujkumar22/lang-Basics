@@ -107,5 +107,6 @@ console.log(arr.includes(3)); // includes returns the boolean value if that numb
     function example(param = '',){} and obj = {fn:'ambuj',} -- are no problem anymore
 */
 
-/*  */
+/* Async / Await */
+// link - https://www.youtube.com/watch?v=PoRJizFvM7s
 
