@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+</head>
+<body>
+<p id='demo'>  </p>
+</body>
+<script>
+class Car {
+  constructor(name, model) {
+    this.name = name;
+    this.model = model;
+  }
+  show(){
+    return "I have a "+ this.name +", it is a "+ this.model +".";
+  }
+}
+class Fuel extends Car {
+  constructor(name, model, fuel) {
+    super(name,model);
+    this.fuel = fuel;
+  }
+  show(){
+    return "I have a "+ this.name +", it is a "+ this.model +" and runs on "+ this.fuel;
+  }
+}
+cardetail = new Car('mercedes','z-class');
+carextraD = new Fuel('mercedes','z-class')
+document.getElementById('demo').innerHTML = carextraD.show();
+var nums = [];
+for (var i = 1; i < 1000; i++){
+  if (i%3 == 0){
+    nums.push(i);
+  } else if (i%5 == 0){
+    nums.push(i);
+  }
+}
+document.write(nums);
+</script>
+</html>
