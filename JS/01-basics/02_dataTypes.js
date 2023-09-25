@@ -10,3 +10,7 @@ console.log(3 + 3)
 // boolean => true or false
 // null => standalone value
 // undefined => 
+// symbol => unique
+
+console.log(typeof undefined); //undefined
+console.log(typeof null); //Object
