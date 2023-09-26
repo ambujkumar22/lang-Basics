@@ -24,5 +24,16 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 
 let someNumber = 3
 let stringNumber = String(someNumber)
-console.log(typeof stringNumber);
-console.log(stringNumber);
+// console.log(typeof stringNumber);
+// console.log(stringNumber);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log(1 + "2" + 2);
+// console.log(1 + 2 + "2");
+
+let gameCounter = 100
+++gameCounter
+console.log(gameCounter);
+
+// prefix/postfix counter: prefix postfix in js
