@@ -1,4 +1,4 @@
-// for in used for Objects iterations majorly but works on arrays as well
+// FOR IN - used for Objects iterations majorly but works on arrays as well
 const myObj = {
     js: "Javascript",
     php: "hyper text pre processor",
@@ -13,4 +13,3 @@ const programming = ['js','php','cpp','csharp']
 for (const key in programming) {
     console.log(`value - ${programming[key]}`);
 }
-
