@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayAmbuj = (str) => {
+        console.log(str+', Ambuj!')
+    }
+    let intervalId
+    document.querySelector('#start').addEventListener('click', function(e){
+        intervalId = setInterval(sayAmbuj, 1000, 'Welcome');
+    })
+    document.querySelector('#stop').addEventListener('click', function(e){
+        clearInterval(intervalId)
+    })
+</script>
+</html>
