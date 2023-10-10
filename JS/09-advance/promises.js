@@ -1,32 +1,32 @@
 // Promises - he Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
-// const promiseOne = new Promise(function(resolve, reject){
-//     // Doan async task
-//     // db calls, cryptography, network
-//     setTimeout(() => {
-//         console.log('Async task is completed');
-//         resolve()
-//     }, 2000);
-// })
+const promiseOne = new Promise(function(resolve, reject){
+    // Doan async task
+    // db calls, cryptography, network
+    setTimeout(() => {
+        console.log('Async task is completed');
+        resolve()
+    }, 2000);
+})
 
 // promiseOne.then(function(){
 //     console.log('Promise Consumed');
 // })
 
-new Promise(function (resolve, reject) {
-    setTimeout(() => {
-        console.log('Async task 2');
-        resolve()
-    }, 1000);
-}).then(function () {
-    console.log('Consumed 2');
-})
-
-// const promiseThree = new Promise(function(resolve, reject){
+// new Promise(function (resolve, reject) {
 //     setTimeout(() => {
-//         resolve({username:"Ambuj", email:"ambuj@gmail.com"})
-//     }, 1000)
+//         console.log('Async task 2');
+//         resolve()
+//     }, 1000);
+// }).then(function () {
+//     console.log('Consumed 2');
 // })
+
+const promiseThree = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        resolve({username:"Ambuj", email:"ambuj@gmail.com"})
+    }, 1000)
+})
 
 // promiseThree.then(function(output){
 //     console.log(output);
