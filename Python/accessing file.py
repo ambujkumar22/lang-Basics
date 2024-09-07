@@ -5,5 +5,3 @@ det = open("details.txt","r")
 for detail in det.readlines(): #the readlines function read multiple lines
     print(detail)
 det.close()
-
-
